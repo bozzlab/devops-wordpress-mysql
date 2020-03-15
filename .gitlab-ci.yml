@@ -5,9 +5,9 @@ deploy to production:
   stage: deploy
   image: wayarmy/alpine-kubectl:latest
   script: 
-          kubectl create -f mysql-svc-deploy.yaml 
-          kubectl create -f wp-svc-deploy.yaml 
-          kubectl create -f mysql-app-deploy.yaml 
-          kubectl create -f wp-app-deploy.yaml  
+        - kubectl create -f mysql-svc-deploy.yaml 
+        - kubectl create -f wp-svc-deploy.yaml 
+        - kubectl create -f mysql-app-deploy.yaml 
+        - kubectl create -f wp-app-deploy.yaml  
   environment:
     name: deploy-production
