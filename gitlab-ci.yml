@@ -1,0 +1,11 @@
+stages:
+- deploy
+
+deploy to production:
+  stage: deploy
+  script: kubectl create -f mysql-svc-deploy.yaml 
+          kubectl create -f wp-svc-deploy.yaml 
+          kubectl create -f mysql-app-deploy.yaml 
+          kubectl create -f wp-app-deploy.yaml  
+  environment:
+    name: production
