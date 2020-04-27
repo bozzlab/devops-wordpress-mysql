@@ -1,4 +1,4 @@
-# devops-wordpress-mysql
+# DevOps Wordpress and Mysql
 
 
 ## Running on Docker in localhost
